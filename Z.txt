@@ -3,7 +3,7 @@ sqlite3 db.sqlite3
 select * from auth_user;
 .tables
 select * from django_migrations;
-.mode colum
+.mode column
 
 Under models.py
 from django.db import models
@@ -40,3 +40,8 @@ Under admin.py register the class name
 admin.site.register(DanceGenre)
 # admin.site.register(DanceClass)
 
+sudo pip3 install django-forms-bootstrap
+
+
+
+<!--<a href="{% url 'view_cart' %}">-->
