@@ -15,11 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from dance_app.views import index
+from dance_app.views import index, login, logout, vip_view_function
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', index),
+    url(r'^admin/', admin.site.urls, name="admin_link"),
+    url(r'^$', index, name="index_link"),
+    url(r'^login$', login, name="login_link"),
+    url(r'^logout$', logout, name="logout_link"),
+    url(r'^vip$', vip_view_function, name="vip_link"),
 ]
+
 
 
