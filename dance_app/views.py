@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponse
-from django.contrib import auth
+from django.contrib import auth, messages
 from .forms import loginForm
 from django.contrib.auth.decorators import login_required
 
@@ -23,7 +23,9 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
+    messages.success(request, "you have logged out")
     return redirect(index)
+
 
 @login_required
 def vip_view_function(request):

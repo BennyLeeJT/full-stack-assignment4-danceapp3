@@ -1,0 +1,42 @@
+.headers on
+sqlite3 db.sqlite3
+select * from auth_user;
+.tables
+select * from django_migrations;
+.mode colum
+
+Under models.py
+from django.db import models
+
+# Create your models here.
+class DanceGenre(models.Model):
+    name = models.CharField(blank=False, max_length=255)
+    
+    def __str__(self):
+        return self.name
+
+class DanceClass(models.Model):
+    name = models.CharField(blank=False, max_length=255)
+    time = models.IntegerField(blank=False, default=0)
+    location = models.CharField(blank=False, max_length=255)
+    danceclass_genre1 = models.ForeignKey(DanceGenre, on_delete=models.CASCADE, related_name='fk_classinstructor_genre')
+    danceclass_instructor1 = models.ForeignKey(DanceGenre, on_delete=models.CASCADE, related_name='fk_classinstructor_genre')
+
+    def __str__(self):
+        return self.name
+        
+
+class Instructor(models.Model):
+    name = models.CharField(blank=False, max_length=255)
+    age = models.IntegerField(blank=False, default=0)
+    gender = models.CharField(blank=False, max_length=255)
+    address = models.CharField(blank=False, max_length=255)
+    dance_genre_var = models.ForeignKey(DanceGenre, on_delete=models.CASCADE, related_name='dance_app')
+    
+    def __str__(self):
+        return self.name
+        
+Under admin.py register the class name
+admin.site.register(DanceGenre)
+# admin.site.register(DanceClass)
+
