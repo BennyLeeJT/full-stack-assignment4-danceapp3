@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "dance_app",
     "accounts",
     "django_forms_bootstrap",
+    "products",
 ]
 
 MIDDLEWARE = [
