@@ -71,7 +71,19 @@ caption p {
     font-size: 20px;
 }
 
-.cart_div
+/*.cart_div*/
+/*{*/
+/*    display: block;*/
+/*}*/
+
+#input_width
 {
-    display: block;
+    /*padding-left: 10px;*/
+    padding-right: 15px;
+}
+
+.total_div
+{
+    float: right;
+    font-size: 16px;
 }

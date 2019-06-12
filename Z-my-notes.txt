@@ -114,3 +114,8 @@ where does my images comes from
 16:             <p>$ {{ item.product.price }} per item</p>
 19:                 <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
 26:                             <div class="input-group-addon">Current: {{item.quantity}}</div>
+
+
+html
+non-breaking space
+&nbsp

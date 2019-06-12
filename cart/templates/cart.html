@@ -15,17 +15,17 @@
             <p class="product-description">{{ item.product.description }}</p>
             <p>$ {{ item.product.price }} per item</p>
             <p>
-                
+                <div class="input-group-addon cart_div"><strong>Current in Cart : {{item.quantity}}</strong></div>
                 <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="exampleInputAmount" class="sr-only">New Qty</label>
                         <div class="input-group">
-                            <div class="input-group-addon cart_div">Current in Cart : {{item.quantity}}</div>
-                            &nbsp;
+                            
+                            <!--&nbsp;-->
                             <!--<div class="container"></div>-->
-                            <div class="input-group-addon">Quantity to be changed to:</div>
-                            <input name="quantity" type="number" min="0" max="999" class="form-control" value="0">
+                            <div class="input-group-addon cart_div">Quantity to change to:&nbsp&nbsp&nbsp</div>
+                            <input name="quantity" type="number" min="0" max="999" class="form-control" id="input_width" value="0">
                             
                         </div>
                     </div>
@@ -36,9 +36,9 @@
     </div>
     {% endfor %}
 </div>
-<div class="row">
-    <p>Total</p>
-    <p><span class="glyphicon glyphicon-usd" aria-hidden="true"></span>{{ total }}</p>
+<div class="row total_div">
+    <p><strong>Total</strong></p>
+    <p><span class="glyphicon " aria-hidden="true"></span><strong>${{ total }}</strong></p>
     <a href="{% url 'checkout' %}" class="btn btn-warning" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
 </div>
 
