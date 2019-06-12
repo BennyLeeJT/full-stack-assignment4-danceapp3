@@ -61,3 +61,14 @@ python-apt==0.9.3.5ubuntu2
 
 nothing to do w project but its not working
 
+heroku push fail
+removing 
+unattended-upgrades==0.1
+
+ Could not find a version that satisfies the requirement unattended-upgrades==0.1 (from -r /tmp/build_c743c74b2411f34f7bed5422f8acf579/requirements.txt (line 24)) (from versions: )
+       No matching distribution found for unattended-upgrades==0.1 (from -r /tmp/build_c743c74b2411f34f7bed5422f8acf579/requirements.txt (line 24))
+ !     Push rejected, failed to compile Python app.
+ !     Push failed
+ 
+ 
+ 
