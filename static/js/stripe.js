@@ -1,12 +1,16 @@
 $(function() {
     $("#payment-form").submit(function() {
-        var form = this;
-        var card = {
+        let form = this;
+        Stripe.publishableKey = '{{ publishable }}';
+
+        let card = {
             number: $("#id_credit_card_number").val(),
             expMonth: $("#id_expiry_month").val(),
             expYear: $("#id_expiry_year").val(),
             cvc: $("#id_cvv").val()
         };
+    
+
     
     Stripe.createToken(card, function(status, response) {
         if (status === 200) {
@@ -19,6 +23,7 @@ $(function() {
             $("#id_cvv").removeAttr('name');
             $("#id_expiry_month").removeAttr('name');
             $("#id_expiry_year").removeAttr('name');
+            alert(response.id);
 
             form.submit();
         } else {

@@ -45,3 +45,5 @@ sudo pip3 install django-forms-bootstrap
 
 
 <!--<a href="{% url 'view_cart' %}">-->
+
+pip3 freeze > requirements.txt
