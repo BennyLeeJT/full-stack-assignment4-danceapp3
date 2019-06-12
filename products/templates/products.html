@@ -9,14 +9,14 @@
 
                 <h3>{{ product.name }}</h3>
                 <p class="product-description">{{ product.description }}</p>
-                <p>{{ product.price }}</p>
+                <p>$ {{ product.price }} per item</p>
 
                 <form method="post" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}
                     <div class="input-group">
-                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity" value="1">
                         <span class="input-group-btn">
-                            <button class="btn btn-success" type="submit">Add</button>
+                            <button class="btn btn-warning" type="submit">Add</button>
                         </span>
                     </div>
                 </form>
@@ -25,3 +25,5 @@
     {% endfor %}
 </div>
 {% endblock %}
+
+ 

@@ -77,7 +77,40 @@ unattended-upgrades==0.1
  https://s3.console.aws.amazon.com/s3/buckets/roczi-dance-190524/media/images/?region=us-east-2&tab=overview
  
 
+
+where does my images comes from
+/cart/templates/cart.html:
+	11:         <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+
+/checkout/templates/checkout.html:
+	57:                 <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+
+/dance_project/settings.py:
+	171: # MEDIA_URL = '/media/'
+
+/products/templates/products.html:
+	8:                 <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+	
+	
+	
+	
     
     
     
     
+/checkout/templates/checkout.html:
+	54:     {% for item in cart_items %}
+	57:                 <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+	60:                     <h3>{{ item.product.name }}</h3>
+	61:                     <p class="product-description">{{ item.product.description }}</p>
+	62:                     <p>Total quantity : {{ item.quantity }}</p>
+	63:                     <p>${{ item.product.price }} per item</p>
+	
+/cart/templates/cart.html:
+7:     {% for item in cart_items %}
+11:         <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+14:             <h3>{{ item.product.name }}</h3>
+15:             <p class="product-description">{{ item.product.description }}</p>
+16:             <p>$ {{ item.product.price }} per item</p>
+19:                 <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+26:                             <div class="input-group-addon">Current: {{item.quantity}}</div>

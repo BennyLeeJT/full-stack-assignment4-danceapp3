@@ -1,8 +1,8 @@
 env.py
-*.png
-*.jpg
-static/
-media/
+; *.png
+; *.jpg
+; static/
+; media/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
