@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['full-stack-assignment4-danceapp3-roczi.c9users.io']
+ALLOWED_HOSTS = ['full-stack-assignment4-danceapp3-roczi.c9users.io', "roczi-danceapp.herokuapp.com"]
 
 
 # Application definition
