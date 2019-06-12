@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/RocZi/full-stack-assignment4-danceapp3.svg?branch=master)](https://travis-ci.org/RocZi/full-stack-assignment4-danceapp3)
 
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'

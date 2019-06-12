@@ -49,3 +49,6 @@ sudo pip3 install django-forms-bootstrap
 pip3 freeze > requirements.txt
 
 python3 manage.py collectstatic
+
+to put in readme
+[![Build Status](https://travis-ci.org/RocZi/full-stack-assignment4-danceapp3.svg?branch=master)](https://travis-ci.org/RocZi/full-stack-assignment4-danceapp3)
