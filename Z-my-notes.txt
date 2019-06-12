@@ -70,5 +70,14 @@ unattended-upgrades==0.1
  !     Push rejected, failed to compile Python app.
  !     Push failed
  
- 
+ if need to switch aws keys to 2nd pair
  https://console.aws.amazon.com/iam/home?region=us-east-2#/security_credentials
+ 
+ where my aws images are
+ https://s3.console.aws.amazon.com/s3/buckets/roczi-dance-190524/media/images/?region=us-east-2&tab=overview
+ 
+
+    
+    
+    
+    

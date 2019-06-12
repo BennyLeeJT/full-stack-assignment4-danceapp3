@@ -1,6 +1,7 @@
 $(function() {
     $("#payment-form").submit(function() {
         let form = this;
+        alert("TEST")
         Stripe.publishableKey = '{{ publishable }}';
 
         let card = {
@@ -35,3 +36,6 @@ $(function() {
     return false;
     });
 });
+
+
+// not in use since, we solve the submission error by putting this script codes into html
