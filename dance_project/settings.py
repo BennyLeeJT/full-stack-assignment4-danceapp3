@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-import env #comment out to work on c9. comment in when deploying to heroku for heroku to work.
+# import env #comment out to work on c9. comment in when deploying to heroku for heroku to work.
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
