@@ -1,14 +1,19 @@
 body {
-    font-family: Arial;
-    padding-top: 100px;
-    /*background-color: red;*/
+    font-family: Helvetica;
+    padding-top: 55px;
+    /*background-color: #F7C85C;*/
+    /*background-color: linear-gradient(to right, #F99854, #F99854 60%, #F7C85C);*/
+    /*background-color: linear-gradient(to right, #F99854, #F7C85C) !important;*/
+    background: linear-gradient(to right, #F99854, #F5C95C 65%, red, blue);
+    font-size: 16px;
+
 }
 
 footer {
     margin-top: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-top: 1px solid #ededed;
+    /*border-top: 1px solid #ededed; got a weird line*/
     color: #A9A9A9;
 }
 
@@ -60,6 +65,7 @@ caption p {
 .panel-body {
     height: 100%;
     border: 1px solid #ddd;
+    /*padding: 0px; no need*/ 
 }
 
 .product-description {
@@ -79,11 +85,125 @@ caption p {
 #input_width
 {
     /*padding-left: 10px;*/
-    padding-right: 15px;
+    padding-right: 13px;
 }
 
 .total_div
 {
-    float: right;
+    float: left;
     font-size: 22px;
+}
+
+/*.navbar-default .navbar-collapse, .navbar-default .navbar-form*/
+/*{*/
+/*    border-color: #F7C85C !important;*/
+/*}*/
+
+#navbar_id
+{
+    /*border-color: #F7C85C;*/
+    border-color: #F99854;
+    /*background-image: linear-gradient(#f5d285, #f7ca65 60%, #F7C85C);*/
+    background-image: linear-gradient(#F99854, #F99854 60%, #F99854);
+
+}
+
+
+/*#div_beside_search #div_search*/
+/*{*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.logo*/
+/*{*/
+/*     height:300px;*/
+/*     width:300px;*/
+/*     display: inline-block;*/
+/*}*/
+
+/*.navbar*/
+/*{*/
+    /*position: relative;*/
+    /*min-height: 50px;*/
+    /*margin-bottom: 0px !important;*/
+/*}*/
+
+
+/*.navbar-default .badge {*/
+/*    background-color: #fff;*/
+/*    color: #2fa4e7;*/
+
+.navbar-default .badge
+{
+    background-color: #fff;
+    color: #12CDD6 !important;
+}
+
+
+@font-face {
+    font-family: 'sudsy_outlineregular';
+    src: url('fonts/SudsyOutline/sudsyoutline-webfont.eot');
+    src: url('fonts/SudsyOutline/sudsyoutline-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SudsyOutline/sudsyoutline-webfont.woff2') format('woff2'),
+         url('fonts/SudsyOutline/sudsyoutline-webfont.woff') format('woff'),
+         url('fonts/SudsyOutline/sudsyoutline-webfont.ttf') format('truetype'),
+         url('fonts/SudsyOutline/sudsyoutline-webfont.svg#sudsy_outlineregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.navbar-brand
+{
+    text-shadow:
+		-1px -1px 0 #DD004F,
+		1px -1px 0 #DD004F,
+		-1px 1px 0 #DD004F,
+		1px 1px 0 #DD004F;
+	
+	font-family: sudsy_outlineregular;
+	color: white;
+	font-weight: bold;
+	fill: white;
+	font-size: 30px;
+}
+
+
+
+/*#navbar_brand_id*/
+/*{*/
+/*    font-size: 20px; no need as navbar-brand class takes care of it*/
+/*}*/
+
+
+#logo_pic
+{
+    display: inline-block;
+}
+/*.btn-primary {*/
+/*    color: #ffffff;*/
+/*    background-color: #2fa4e7;*/
+/*    border-color: #2fa4e7;*/
+/*}*/
+
+/*#cart_btn_primary_id*/
+/*{*/
+/*    background-image: #12CDD6;*/
+/*}*/
+
+/*.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {*/
+/*    color: #ffffff;*/
+/*    background-color: #178acc;*/
+/*}*/
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    /*color: #ffffff;*/
+    background-color: #f99854;
+}
+
+
+#home_logo_div #home_write_up_div
+{
+    display: inline-block;
 }

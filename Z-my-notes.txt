@@ -111,7 +111,7 @@ where does my images comes from
 11:         <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
 14:             <h3>{{ item.product.name }}</h3>
 15:             <p class="product-description">{{ item.product.description }}</p>
-16:             <p>$ {{ item.product.price }} per item</p>
+16:             <p>${{ item.product.price }} per item</p>
 19:                 <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
 26:                             <div class="input-group-addon">Current: {{item.quantity}}</div>
 
@@ -119,3 +119,34 @@ where does my images comes from
 html
 non-breaking space
 &nbsp
+
+linebreak without using <br>
+&#8203;
+
+If you’d prefer to stay in the CLI to enter your credentials, you may run heroku login -i
+
+
+
+Searching for profile in/ (Found 9 matches in 3 files)
+
+/accounts/urls.py:
+	3: from .views import index, register, profile, logout, login
+	7:     url(r'^profile/$', profile, name='profile'),
+
+/accounts/views.py:
+	49: def profile(request):
+	50:     """A view that displays the profile page of a logged in user"""
+	51:     return render(request, 'profile.html')
+
+/templates/base.html:
+	32:                         <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
+
+Found 9 matches in 3 files 
+
+
+the nav bar highlight mouse over can be changed color with this
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #FFFF00;
+    color: #FFC0CB;
+}
+
