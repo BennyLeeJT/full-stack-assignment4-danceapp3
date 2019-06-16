@@ -170,7 +170,7 @@ caption p {
 	font-family: sudsy_outlineregular;
 	color: white;
 	font-weight: bold;
-	fill: white;
+	/*fill: white;*/
 	font-size: 30px;
 	display:block;
 }

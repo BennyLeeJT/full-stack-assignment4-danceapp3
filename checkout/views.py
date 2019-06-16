@@ -40,7 +40,7 @@ def checkout(request):
             
             try:
                 customer = stripe.Charge.create(
-                    amount=int(total * 423),
+                    amount=int(total * 1),
                     currency="SGD",
                     description=request.user.email,
                     card=payment_form.cleaned_data['stripe_id']
