@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from dance_app.views import index, login, logout, vip_view_function
+from dance_app.views import index, login, logout, vip_view_function, index_home_function
 from accounts import urls as urls_accounts
 from products import urls as urls_products
 from cart import urls as urls_cart
@@ -24,11 +24,13 @@ from checkout import urls as urls_checkout
 from products.views import all_products
 from django.views import static
 from .settings import MEDIA_ROOT
+from home.views import index_home_function
+# from home import urls as urls_home
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls, name="admin_link"),
-    url(r'^$', all_products, name='index'),
+    url(r'^all_products/', all_products, name='index'),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^products/', include(urls_products)),
     url(r'^cart/', include(urls_cart)),
@@ -38,6 +40,7 @@ urlpatterns = [
     url(r'^login$', login, name="login_link"),
     url(r'^logout$', logout, name="logout_link"),
     url(r'^vip$', vip_view_function, name="vip_link"),
+    url(r'^$', index_home_function, name='index_home_function'),
 ]
 
 

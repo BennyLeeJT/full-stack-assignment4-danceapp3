@@ -5,8 +5,13 @@ body {
     /*background-color: linear-gradient(to right, #F99854, #F99854 60%, #F7C85C);*/
     /*background-color: linear-gradient(to right, #F99854, #F7C85C) !important;*/
     background: linear-gradient(to right, #F99854, #F5C95C 65%, red, blue);
-    font-size: 16px;
+    font-size: 20px;
+    color: black;
+}
 
+h2
+{
+    color: black;
 }
 
 footer {
@@ -186,6 +191,7 @@ caption p {
     min-height:320px;
     min-width: 300px;
     max-width: 800px;   
+    margin-bottom: 10px;
 }
 /*.btn-primary {*/
 /*    color: #ffffff;*/
@@ -209,6 +215,10 @@ caption p {
     background-color: #07D0CC;
 }
 
+.navbar-toggle
+{
+    background-color: #07D0CC;
+}
 
 /*#home_logo_div #home_write_up_div*/
 /*{*/
@@ -277,6 +287,7 @@ caption p {
   text-align: center;
   flex: 1;
   margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 .side_text_span
@@ -307,8 +318,22 @@ caption p {
     margin: 0px 0px;
 }
 
-/*.fa*/
-/*{*/
-/*    -webkit-text-stroke-width: 1px;*/
-/*    -webkit-text-stroke-color: black;*/
-/*}*/
+.fa
+{
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+
+}
+
+h1
+{
+    color: black;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+
+}
+
+.tailor_full_note
+{
+    color: red;
+}

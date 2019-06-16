@@ -117,7 +117,7 @@ where does my images comes from
 
 
 html
-non-breaking space
+non-breaking space spacing
 &nbsp
 
 linebreak without using <br>
@@ -150,3 +150,42 @@ the nav bar highlight mouse over can be changed color with this
     color: #FFC0CB;
 }
 
+blue color #178acc change to #07D0CC
+
+
+
+/accounts/templates/index.html:
+	1: {% extends 'base.html' %}
+
+/accounts/templates/login.html:
+	1: {% extends "base.html" %}
+
+/accounts/templates/profile.html:
+	1: {% extends "base.html" %}
+
+/accounts/templates/register.html:
+	1: {% extends "base.html" %}
+
+/cart/templates/cart.html:
+	1: {% extends 'base.html' %}
+
+/checkout/templates/checkout.html:
+	1: {% extends "base.html" %}
+
+/home/templates/index.html:
+	1: {% extends 'base.html' %}
+
+/products/templates/products.html:
+	1: {% extends 'base.html' %}
+
+/templates/registration/password_reset_complete.html:
+	1: {% extends "base.html" %}
+
+/templates/registration/password_reset_confirm.html:
+	1: {% extends "base.html" %}
+
+/templates/registration/password_reset_done.html:
+	1: {% extends "base.html" %}
+
+/templates/registration/password_reset_form.html:
+	1: {% extends "base.html" %}

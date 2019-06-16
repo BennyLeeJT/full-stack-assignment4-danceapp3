@@ -7,6 +7,10 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, "index.html")
 
+def index_home_function(request):
+    return render(request, "base_no_logo.html")
+    
+
 def login(request):
     if request.method == "POST":
         username_var = request.POST.get("username")
