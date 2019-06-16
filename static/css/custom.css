@@ -306,3 +306,9 @@ caption p {
 {
     margin: 0px 0px;
 }
+
+.fa
+{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
