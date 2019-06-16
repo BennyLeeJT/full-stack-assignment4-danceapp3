@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Galaxy of Dance Dance Revolution!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    
     <link rel="shortcut icon" href="/static/images/favicon.ico"> <!-- browser tab icon -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -18,29 +20,31 @@
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-top" id="navbar_id">
         <div class="container">
             
-            <div class="navbar-header">
+            <div class="navbar-header" id="navbar_header_id">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
+                </button>   
                 
-                <a class="navbar-brand" id="navbar_brand_id" href="/">GALAXY OF DANCE DANCE REVOLUTION</a>
+                <div id="navbar_brand_div">
+                    <a class="navbar-brand" id="navbar_brand_id" href="/">GALAXY OF DANCE DANCE REVOLUTION</a>
+                </div>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/"><i class="fa "></i> &#127968; <strong>Home</strong></a></li>
                     {% if user.is_authenticated %}
-                        <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> <strong>Profile</strong></a></li>
-                        <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> <strong>Log Out</strong></a></li>
+                        <li><a href="{% url 'profile' %}"><i class="fa"></i> &#128100; <strong>Profile</strong></a></li> <!--  fa-user-->
+                        <li><a href="{% url 'logout' %}"><i class="fa"></i> &#128682; <strong>Log Out</strong></a></li> <!--  fa-sign-out-->
                     {%  else %}
-                        <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> <strong>Register</strong></a></li>
-                        <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> <strong>Log In</strong></a></li>
+                        <li><a href="{% url 'register' %}"><i class="fa "></i> &#10133;<strong>Register</strong></a></li> <!--  fa-user-plus-->
+                        <li><a href="{% url 'login' %}"><i class="fa"></i> <span id="login_symbol_id"> 	&#129154; <!--&#9094;--> </span> <span id="login_text_id"> <strong>Log In</strong> </span> </a></li> <!--  fa-sign-in-->
                     {% endif %}
                     <li>
                         <a href="{% url 'view_cart' %}">
-                            <i class="fa fa-shipping-cart"></i><strong>Cart</strong>
+                            <i class="fa fa-shipping-cart"></i>&#128722; <strong>Cart</strong>
                             {% if product_count > 0 %}
                             <label class="badge badge-warning">{{ product_count }}</label>
                             {% endif %}
@@ -59,17 +63,44 @@
             </div>
         </div>
     {% endif %}
+    <div class="wrapper">
+        <div class="row" id="home_logo_div">
+            <div class="column">
+                <div class="column_img_div">
+                    <img class="logo img-responsive" id="logo_pic" src="/static/images/logo-sketch2.jpg"></img>
+                </div>
+            </div>
     
-    <div class="d-inline-flex p-2" id="home_logo_div">
-        <img class="logo" src="/static/images/logo-sketch2.jpg"></img>
+            <div class="column">
+                <div class="column_img_div_side_text">
+                    <strong>
+                        <span class="side_text_span">Welcome to Galaxy of </span>
+                        <span class="side_text_span">Dance Dance Revolution!</span>
+                        &#8203;
+                        <span class="side_text_span">We are an e-commerce platform that </span>
+                        <span class="side_text_span">specifically supply products for dancers, </span>
+                        <span class="side_text_span">practitioners and those whom are involved </span>
+                        <span class="side_text_span">in this artistic Industry.</span>
+                        &#8203;
+                        <span class="side_text_span">Happy Shopping!</span>
+                    </strong>
+                </div>
+            </div>
+            
+            <!--<div class="column">-->
+            <!--    <div class="column_right_side">-->
+            <!--        <strong>Welcome to Galaxy of Dance Dance Revolution!-->
+            <!--        &#8203;-->
+            <!--        <p></p>-->
+            <!--        We are an e-commerce platform that specifically supply products for dancers, practitioners and those whom are involved in this artistic Industry.-->
+            <!--        <p></p>-->
+            <!--        Happy Shopping!-->
+            <!--        </strong>-->
+            <!--    </div>-->
+            <!--</div>-->
+            
+        </div>
     </div>
-    
-    <div class="p-2">
-        Welcome to Galaxy of Dance Dance Revolution!
-        &#8203;
-        We are an e-commerce platform specifically supply products for dancers, practitioners and those whom are involved in this artistic Industry.
-    </div>
-    
     
     <div class="container" id="div_search">
         <div class="display d-inline-flex p-2">
@@ -81,7 +112,7 @@
         {% block content %} {% endblock %}
     </div>
     <footer>
-        <div class="container">
+        <div class="container_text">
             <p></p>
         </div>
     </footer>

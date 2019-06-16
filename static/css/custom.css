@@ -167,19 +167,25 @@ caption p {
 	font-weight: bold;
 	fill: white;
 	font-size: 30px;
+	display:block;
 }
 
 
 
-/*#navbar_brand_id*/
-/*{*/
-/*    font-size: 20px; no need as navbar-brand class takes care of it*/
-/*}*/
+#navbar_brand_id
+{
+    padding-right: 0px;
+}
 
 
 #logo_pic
 {
-    display: inline-block;
+    /*width: auto;*/
+    width: 100%;
+    max-height: 400px;
+    min-height:320px;
+    min-width: 300px;
+    max-width: 800px;   
 }
 /*.btn-primary {*/
 /*    color: #ffffff;*/
@@ -199,11 +205,104 @@ caption p {
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
     /*color: #ffffff;*/
-    background-color: #f99854;
+    /*background-color: #f99854;*/
+    background-color: #07D0CC;
 }
 
 
-#home_logo_div #home_write_up_div
+/*#home_logo_div #home_write_up_div*/
+/*{*/
+/*    display: inline-block;*/
+/*}*/
+
+#login_symbol_id
 {
-    display: inline-block;
+    /*transform: scale(2);*/
+    /*font-size: x-large;*/
+    /*font-size: xx-large;*/
+    font-size: 16px;
+    color: #A6A6A6;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+/*trying difference sizes and to align with text but no success*/
+/*.fa-sign-in*/
+/*{*/
+    /*font-size: 20px;*/
+/*}*/
+
+/*#login_text_id*/
+/*{*/
+/*    text-align: justify;*/
+    
+/*}*/
+
+
+/*.wrapper {*/
+  /*margin: 15px;*/
+  /*background-color: red;*/
+/*}*/
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.column_img_div 
+{
+  /*background-color: blue;*/
+  height: 100%;
+  flex: 1;
+  width:100%;
+  /*padding-top: 10px;*/
+  
+}
+
+.column_img_div_side_text
+{
+  /*background-color: green;*/
+  height: 100%;
+  color: black;
+  font-size: 24px;
+  text-align: center;
+  flex: 1;
+  margin-top: 50px;
+}
+
+.side_text_span
+{
+    display: block; 
+}
+
+/*.column_right_side*/
+/*{*/
+/*    flex: 0.5;*/
+/*}*/
+
+.img-responsive { 
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    margin-top: 50px;
+}
+
+#navbar_brand_div
+{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#navbar_header_id
+{
+    margin: 0px 0px;
 }
