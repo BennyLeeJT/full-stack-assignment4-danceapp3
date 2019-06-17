@@ -269,7 +269,11 @@ Migrate and create the superuser
 python3 manage.py migrate
 heroku run python manage.py createsuperuser
 
-	
+
+
+Product pictures are uploaded to AWS, following Code Institute online Learning Material and guide by creating an account and setting it up so Django will store into AWS directly
+
+
 DEPLOYING
 Commit the changed files
 
