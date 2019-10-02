@@ -12,7 +12,7 @@ We also provide tailor services for whoever wish to make any bulk orders.
 
 This web application is for user to purchase their dance gear and accessories, and to contact the company for tailor services. From the home page, users will see the company logo and a welcome text.
 
-There is a search bar in every page and right in the beginning home page, they can straightaway search for a name of the product they are looking for.
+There is a search bar in every page and right in the beginning of home page, they can straightaway search for a name of the product they are looking for.
 
 As a user who wants to purchase individual dance gear and accessories, they can go to the products page to view the different type of products available, view the price per item, key in the amount that they wish to buy for each item and click Add to include the item and amount to Cart. The minimum default number of item to add is 1 and only 1 item and its amount can be added at a time.
 
